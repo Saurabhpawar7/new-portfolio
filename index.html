@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saurabh | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <img src="prof.jpg" alt="" class="logo">
+
+        <!-- HAMBURGER BUTTON -->
+        <button class="hamburger" id="hamburger" type="button">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= MENU ================= -->
+
+    <div class="menu" id="menu">
+
+        <div class="menu-top">
+
+            <span>MENU</span>
+
+            <button id="closeMenu" type="button">
+                ×
+            </button>
+
+        </div>
+
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+
+        <!-- MUSIC -->
+
+        <div class="menu-option">
+
+            <div>
+                <strong>Background Music</strong>
+                <small id="musicText">Off</small>
+            </div>
+
+            <button
+                class="switch"
+                id="musicSwitch"
+                type="button"
+            >
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- THEME -->
+
+        <div class="menu-option">
+
+            <div>
+                <strong>Appearance</strong>
+                <small id="themeText">Dark Mode</small>
+            </div>
+
+            <button
+                class="switch"
+                id="themeSwitch"
+                type="button"
+            >
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- RESUME -->
+
+        <a
+            href="resume.pdf"
+            download
+            class="resume"
+        >
+            Download Resume
+            <span>↓</span>
+        </a>
+
+    </div>
+
+
+    <!-- ================= MUSIC ================= -->
+
+    <audio
+        id="music"
+        src="bgaudio.mp3"
+        loop
+    ></audio>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <p>Hello, I'm</p>
+
+            <h1>Saurabh</h1>
+
+            <h2>Java Full Stack Developer</h2>
+
+            <p class="hero-description">
+
+                I build modern websites, web applications
+                and AI-powered solutions.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects">
+                    View Projects
+                </a>
+
+                <a href="#contact">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <p class="label">
+                01 — ABOUT ME
+            </p>
+
+            <h2>
+                Who I am.
+            </h2>
+
+
+            <div class="about">
+
+                <div class="profile-card">
+
+                    <div class="profile-image">
+
+                        <img
+                            src="prof.jpg"
+                            alt="Saurabh profile photo"
+                        >
+
+                    </div>
+
+                    <h3>Saurabh</h3>
+
+                    <p>
+                        Computer Science & Engineering
+                    </p>
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <p>
+
+                        Hello! I'm Saurabh, a Computer Science
+                        and Engineering student passionate about
+                        software development and artificial
+                        intelligence.
+
+                    </p>
+
+                    <p>
+
+                        I enjoy creating websites, full-stack
+                        applications and intelligent systems.
+
+                    </p>
+
+                    <p>
+
+                        Currently, I'm focusing on Java Full
+                        Stack Development while also learning
+                        AI and Machine Learning.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section">
+
+            <p class="label">
+                02 — SKILLS
+            </p>
+
+            <h2>
+                My toolkit.
+            </h2>
+
+            <div class="skills">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>React</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Machine Learning</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Docker</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section id="services" class="section">
+
+            <p class="label">
+                03 — SERVICES
+            </p>
+
+            <h2>
+                What I build.
+            </h2>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <small>01</small>
+
+                    <h3>
+                        Full Stack Development
+                    </h3>
+
+                    <p>
+                        Modern and responsive full-stack
+                        web applications.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <small>02</small>
+
+                    <h3>
+                        AI & Machine Learning
+                    </h3>
+
+                    <p>
+                        Intelligent applications and
+                        machine learning solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <small>03</small>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Clean, responsive and modern
+                        websites.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <small>04</small>
+
+                    <h3>
+                        Automation
+                    </h3>
+
+                    <p>
+                        Automated workflows and
+                        AI-powered systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <p class="label">
+                04 — PROJECTS
+            </p>
+
+            <h2>
+                Things I've built.
+            </h2>
+
+
+            <div class="cards">
+
+                <div class="card project">
+
+                    <small>01</small>
+
+                    <h3>
+                        AI Recommendation System
+                    </h3>
+
+                    <p>
+                        A machine learning recommendation
+                        system.
+                    </p>
+
+                </div>
+
+
+                <div class="card project">
+
+                    <small>02</small>
+
+                    <h3>
+                        Agentic AI Ecosystem
+                    </h3>
+
+                    <p>
+                        AI-powered ecosystem for business
+                        automation.
+                    </p>
+
+                </div>
+
+
+                <div class="card project">
+
+                    <small>03</small>
+
+                    <h3>
+                        Movie Recommendation System
+                    </h3>
+
+                    <p>
+                        Movie discovery and recommendation
+                        application.
+                    </p>
+
+                </div>
+
+
+                <div class="card project">
+
+                    <small>04</small>
+
+                    <h3>
+                        Portfolio Website
+                    </h3>
+
+                    <p>
+                        Personal developer portfolio with
+                        glassmorphism design.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section contact">
+
+            <p class="label">
+                05 — CONTACT
+            </p>
+
+            <h2>
+                Let's build something.
+            </h2>
+
+            <p>
+                Have a project or opportunity?
+                Let's connect.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    GitHub
+                </a>
+
+                <a href="#">
+                    LinkedIn
+                </a>
+
+                <a href="mailto:yourmail@gmail.com">
+                    Email
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>
+            © 2026 Saurabh
+        </span>
+
+        <span>
+            Learn • Build • Improve
+        </span>
+
+    </footer>
+
+
+    <!-- IMPORTANT:
+         KEEP THIS AT THE VERY END -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
