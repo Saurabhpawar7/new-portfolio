@@ -1,174 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saurabh Pawar | Java Full Stack &amp; AI Developer</title>
+<meta name="description" content="Portfolio of Saurabh Pawar, a Computer Science student building full-stack web apps and AI systems.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="progress" id="progress"></div>
+<canvas id="neural" aria-hidden="true"></canvas>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
-        <a href="#top" class="brand" aria-label="Back to top">
-            <img src="prof.jpg" alt="Saurabh" class="logo">
-        </a>
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">Saurabh Pawar</a>
+    <nav class="links" aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch between light and dark theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
 
-        <nav class="nav-links" id="navLinks" aria-label="Main">
-            <span class="nav-pill" id="navPill"></span>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="nav-actions">
-            <button class="icon-btn" id="musicSwitch" type="button" aria-label="Toggle background music" aria-pressed="false">♪</button>
-            <button class="icon-btn" id="themeSwitch" type="button" aria-label="Toggle light and dark mode">☾</button>
-            <a href="resume.pdf" download class="resume-btn">Resume <span>↓</span></a>
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hi fade">Hello, I'm</p>
+        <h1 class="fade">Saurabh Pawar</h1>
+        <p class="role fade d2">Java full stack developer building AI-powered products.</p>
+        <p class="lead fade d2">I'm a final-year Computer Science student. I design and build websites, web applications and machine learning systems.</p>
+        <div class="btns fade d3">
+          <a class="btn" href="resume.pdf" download>Download resume</a>
         </div>
-    </header>
+      </div>
+      <div class="portrait fade d2"><img src="avatar.png" alt="Cartoon portrait of Saurabh with curly black hair, glasses and earphones" width="560" height="560"></div>
+    </div>
+  </div>
 
-    <audio id="music" src="bgaudio.mp3" loop></audio>
+  <section id="about"><div class="wrap rv">
+    <h2>About me</h2>
+    <p class="sub">A student developer focused on building things that work.</p>
+    <div class="about">
+      <div>
+        <p>I'm a Computer Science and Engineering student from Maharashtra, India, graduating in 2026. I enjoy turning ideas into working software, from clean websites to full-stack applications and intelligent systems.</p>
+        <p>I'm currently going deep on Java full stack development while learning AI and machine learning. My goal is to grow into an ML or research engineer at a leading product company.</p>
+      </div>
+      <div class="card facts">
+        <div><span>Education</span><b>BTech, Computer Science &amp; Engineering</b></div>
+        <div><span>Focus</span><b>Full stack development, AI and ML</b></div>
+        <div><span>Location</span><b>Maharashtra, India</b></div>
+      </div>
+    </div>
+  </div></section>
 
-    <main id="top">
-        <!-- ================= HERO ================= -->
-        <section class="hero">
-            <p class="hero-in" style="--d:0.1s">Hello, I'm</p>
-            <h1 class="hero-in" style="--d:0.25s">Saurabh</h1>
-            <h2 class="hero-in" style="--d:0.45s"><span id="typed"></span><i class="caret"></i></h2>
-            <p class="hero-description hero-in" style="--d:0.6s">
-                I build modern websites, web applications and AI-powered solutions.
-            </p>
-            <div class="hero-buttons hero-in" style="--d:0.75s">
-                <a href="#projects">View Projects</a>
-                <a href="#contact">Contact Me</a>
-            </div>
-        </section>
+  <section id="skills"><div class="wrap rv">
+    <h2>Skills</h2>
+    <p class="sub">The technologies I work with.</p>
+    <div class="groups">
+      <div class="card group"><h3>Languages</h3><div class="chips"><span>Java</span><span>Python</span><span>JavaScript</span><span>SQL</span></div></div>
+      <div class="card group"><h3>Web</h3><div class="chips"><span>HTML</span><span>CSS</span><span>React</span><span>Spring Boot</span></div></div>
+      <div class="card group"><h3>AI and data</h3><div class="chips"><span>Machine Learning</span></div></div>
+      <div class="card group"><h3>Tools</h3><div class="chips"><span>Git</span><span>GitHub</span><span>Docker</span></div></div>
+    </div>
+  </div></section>
 
-        <!-- ================= ABOUT ================= -->
-        <section id="about" class="section">
-            <p class="label reveal">01 — ABOUT ME</p>
-            <h2 class="reveal">Who I am.</h2>
+  <section id="services"><div class="wrap rv">
+    <h2>Services</h2>
+    <p class="sub">What I can build for you.</p>
+    <div class="svc">
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Full stack development</h3><p>Responsive web applications with a Java backend and a modern front end.</p></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l8 1M7 8l4 8M17 10l-4 6"/></svg></div><h3>AI and machine learning</h3><p>Recommendation systems and models that learn from data.</p></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>Web development</h3><p>Clean, fast, mobile-friendly websites.</p></div>
+      <div class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Automation</h3><p>AI-powered workflows that remove repetitive work.</p></div>
+    </div>
+  </div></section>
 
-            <div class="about">
-                <div class="profile-card reveal">
-                    <div class="profile-image">
-                        <img src="prof.jpg" alt="Saurabh profile photo">
-                    </div>
-                    <h3>Saurabh</h3>
-                    <p>Computer Science &amp; Engineering</p>
-                </div>
+  <section id="projects"><div class="wrap rv">
+    <h2>Projects</h2>
+    <p class="sub">Selected work.</p>
+    <div class="grid">
+      <div class="card proj"><h3>AI Recommendation System</h3><p>A machine learning system that suggests items based on what people like.</p><span class="st">Link coming soon</span></div>
+      <div class="card proj"><h3>Agentic AI Ecosystem</h3><p>An AI-powered ecosystem that automates business tasks.</p><span class="st">Link coming soon</span></div>
+      <div class="card proj"><h3>Movie Recommendation System</h3><p>A movie discovery app that recommends what to watch next.</p><span class="st">Link coming soon</span></div>
+      <a class="card proj" href="https://github.com/Saurabhpawar7/new-portfolio" target="_blank" rel="noopener"><h3>Portfolio Website</h3><p>This site: a personal developer portfolio built with HTML, CSS and JavaScript.</p><span class="st live">View on GitHub</span></a>
+    </div>
+  </div></section>
 
-                <div class="about-text reveal" style="--d:0.15s">
-                    <p>Hello! I'm Saurabh, a Computer Science and Engineering student passionate about software development and artificial intelligence.</p>
-                    <p>I enjoy creating websites, full-stack applications and intelligent systems.</p>
-                    <p>Currently, I'm focusing on Java Full Stack Development while also learning AI and Machine Learning.</p>
-                </div>
-            </div>
-        </section>
+  <section id="contact" class="contact"><div class="wrap rv">
+    <h2>Get in touch</h2>
+    <p class="sub">Have a project or an opportunity? I'd like to hear about it.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:saurabhpawar4002@gmail.com">Email me</a>
+      <a class="btn alt" href="https://github.com/Saurabhpawar7" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/saurabh-pawar-7201a0255" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div></section>
+</main>
 
-        <!-- ================= SKILLS ================= -->
-        <section id="skills" class="section">
-            <p class="label reveal">02 — SKILLS</p>
-            <h2 class="reveal">My toolkit.</h2>
+<footer><div class="wrap"><span>© 2026 Saurabh Pawar</span><span>Learn. Build. Improve.</span></div></footer>
 
-            <div class="skills stagger">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span>
-                <span>Spring Boot</span><span>React</span><span>Python</span><span>SQL</span>
-                <span>Machine Learning</span><span>Git</span><span>GitHub</span><span>Docker</span>
-            </div>
-        </section>
-
-        <!-- ================= SERVICES ================= -->
-        <section id="services" class="section">
-            <p class="label reveal">03 — SERVICES</p>
-            <h2 class="reveal">What I build.</h2>
-
-            <div class="cards stagger">
-                <div class="card">
-                    <small>01</small>
-                    <h3>Full Stack Development</h3>
-                    <p>Modern and responsive full-stack web applications.</p>
-                </div>
-                <div class="card">
-                    <small>02</small>
-                    <h3>AI &amp; Machine Learning</h3>
-                    <p>Intelligent applications and machine learning solutions.</p>
-                </div>
-                <div class="card">
-                    <small>03</small>
-                    <h3>Web Development</h3>
-                    <p>Clean, responsive and modern websites.</p>
-                </div>
-                <div class="card">
-                    <small>04</small>
-                    <h3>Automation</h3>
-                    <p>Automated workflows and AI-powered systems.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= PROJECTS ================= -->
-        <section id="projects" class="section">
-            <p class="label reveal">04 — PROJECTS</p>
-            <h2 class="reveal">Things I've built.</h2>
-
-            <div class="cards stagger">
-                <a href="#projects">
-                    <div class="card project">
-                        <small>01</small>
-                        <h3>AI Recommendation System</h3>
-                        <p>A machine learning recommendation system.</p>
-                    </div>
-                </a>
-                <a href="#projects">
-                    <div class="card project">
-                        <small>02</small>
-                        <h3>Agentic AI Ecosystem</h3>
-                        <p>AI-powered ecosystem for business automation.</p>
-                    </div>
-                </a>
-                <a href="#projects">
-                    <div class="card project">
-                        <small>03</small>
-                        <h3>Movie Recommendation System</h3>
-                        <p>Movie discovery and recommendation application.</p>
-                    </div>
-                </a>
-                <a href="https://github.com/Saurabhpawar7/new-portfolio" target="_blank" rel="noopener">
-                    <div class="card project">
-                        <small>04</small>
-                        <h3>Portfolio Website</h3>
-                        <p>Personal developer portfolio with glassmorphism design.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- ================= CONTACT ================= -->
-        <section id="contact" class="section contact">
-            <p class="label reveal">05 — CONTACT</p>
-            <h2 class="reveal">Let's build something.</h2>
-            <p class="reveal">Have a project or opportunity? Let's connect.</p>
-
-            <div class="socials reveal" style="--d:0.15s">
-                <a href="https://github.com/Saurabhpawar7" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/in/saurabh-pawar-7201a0255" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="mailto:saurabhpawar4002@gmail.com">Email</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <span>© 2026 Saurabh</span>
-        <span>Learn • Build • Improve</span>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
