@@ -2,6 +2,8 @@
 (function(){
   var cv=document.getElementById("neural"),cx=cv.getContext("2d"),W,H,dpr,nodes=[];
   var m={x:-9999,y:-9999},R=170,D=140,still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function off(){return matchMedia("(max-width: 760px), (pointer: coarse)").matches;}
+  var running=false;
   function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
   function rgba(c,a){var h=c.replace("#","");if(h.length===3)h=h.replace(/./g,"$&$&");return "rgba("+parseInt(h.slice(0,2),16)+","+parseInt(h.slice(2,4),16)+","+parseInt(h.slice(4,6),16)+","+a+")";}
   function size(){
@@ -13,6 +15,8 @@
   }
   function frame(){
     cx.clearRect(0,0,W,H);
+    if(off()){running=false;return;}
+    running=true;
     var ink=css("--ink")||"#0b1220",acc=css("--accent")||"#1f7ae0";
     for(var i=0;i<nodes.length;i++){
       var a=nodes[i];
@@ -36,7 +40,7 @@
   addEventListener("pointermove",function(e){m.x=e.clientX;m.y=e.clientY;},{passive:true});
   addEventListener("pointerleave",function(){m.x=m.y=-9999;});
   addEventListener("pointerup",function(e){if(e.pointerType!=="mouse"){m.x=m.y=-9999;}});
-  addEventListener("resize",function(){size();if(still)frame();});
+  addEventListener("resize",function(){size();if(!off()&&(still||!running))frame();});
   size();frame();
 })();
 
