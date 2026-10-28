@@ -14,7 +14,9 @@ body{background:var(--bg);color:var(--ink);font:400 16.5px/1.7 var(--body);overf
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{width:min(1080px,92%);margin-inline:auto}
+#neural{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
 main,footer{position:relative;z-index:1}
+@media (max-width:760px),(pointer:coarse){#neural{display:none}}
 
 .nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:env(safe-area-inset-top,0px)}
 .nav .wrap{display:flex;align-items:center;gap:16px;height:68px}
